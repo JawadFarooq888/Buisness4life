@@ -128,10 +128,9 @@ export default async function ServiceDetailPage({
             </div>
 
             <div className="mt-10 rounded-2xl border border-border bg-background-alt p-6">
-              <p className="text-sm font-semibold text-foreground">Starting from</p>
-              <p className="mt-1 text-2xl font-extrabold text-red">{service.priceFrom}</p>
+              <p className="text-sm font-semibold text-foreground">Get a Custom Quote</p>
               <p className="mt-1 text-xs text-muted">
-                Final pricing depends on size, material, and complexity — request a free quote.
+                Pricing depends on size, material, and complexity — request a free quote and we&apos;ll get back to you.
               </p>
             </div>
           </div>

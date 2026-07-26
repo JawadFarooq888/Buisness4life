@@ -17,10 +17,7 @@ export default function ServiceCard({ service }: { service: Service }) {
       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
         {service.shortDescription}
       </p>
-      <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
-        <span className="text-sm font-semibold text-foreground">
-          {service.priceFrom}
-        </span>
+      <div className="mt-5 flex items-center justify-end border-t border-border pt-4">
         <span className="text-sm font-medium text-red transition-transform group-hover:translate-x-1">
           Learn more →
         </span>

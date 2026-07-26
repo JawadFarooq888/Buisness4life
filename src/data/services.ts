@@ -5,7 +5,6 @@ export type Service = {
   description: string[];
   benefits: string[];
   faqs: { q: string; a: string }[];
-  priceFrom: string;
   icon: string;
 };
 
@@ -35,7 +34,6 @@ export const services: Service[] = [
         a: "Yes, we build single and double-sided boards for corner shops, poles, and hanging signage.",
       },
     ],
-    priceFrom: "Rs. 8,000",
     icon: "bulb",
   },
   {
@@ -63,7 +61,6 @@ export const services: Service[] = [
         a: "Yes, we offer CNC engraving, printing, and cut-out lettering on acrylic sheets.",
       },
     ],
-    priceFrom: "Rs. 6,000",
     icon: "layers",
   },
   {
@@ -91,7 +88,6 @@ export const services: Service[] = [
         a: "Yes, we offer face-lit, back-lit (halo effect), and non-illuminated 3D letters.",
       },
     ],
-    priceFrom: "Rs. 15,000",
     icon: "cube",
   },
   {
@@ -119,7 +115,6 @@ export const services: Service[] = [
         a: "Yes, our modular LED design allows individual sections to be serviced without replacing the whole board.",
       },
     ],
-    priceFrom: "Rs. 10,000",
     icon: "sun",
   },
   {
@@ -147,7 +142,6 @@ export const services: Service[] = [
         a: "Yes, we offer a full range of LED-neon colors and can mix multiple colors in one sign.",
       },
     ],
-    priceFrom: "Rs. 5,000",
     icon: "sparkle",
   },
   {
@@ -175,7 +169,6 @@ export const services: Service[] = [
         a: "Yes, we measure, remove the old print, and install a fresh panaflex face on your existing or a new frame.",
       },
     ],
-    priceFrom: "Rs. 25 / sq.ft",
     icon: "panel",
   },
   {
@@ -203,7 +196,6 @@ export const services: Service[] = [
         a: "Same-day turnaround is available for most standard-size print jobs.",
       },
     ],
-    priceFrom: "Rs. 15 / sq.ft",
     icon: "printer",
   },
   {
@@ -231,7 +223,6 @@ export const services: Service[] = [
         a: "Yes, our team handles full and partial vehicle vinyl wraps and lettering.",
       },
     ],
-    priceFrom: "Rs. 20 / sq.ft",
     icon: "vinyl",
   },
   {
@@ -259,7 +250,6 @@ export const services: Service[] = [
         a: "Yes, our installers apply one-way vision film to both flat and curved glass surfaces.",
       },
     ],
-    priceFrom: "Rs. 35 / sq.ft",
     icon: "window",
   },
   {
@@ -287,7 +277,6 @@ export const services: Service[] = [
         a: "A typical shopfront installation takes 2–5 days depending on size and complexity.",
       },
     ],
-    priceFrom: "Rs. 180 / sq.ft",
     icon: "panel",
   },
   {
@@ -315,7 +304,6 @@ export const services: Service[] = [
         a: "Yes, our design team can create or adapt your brand identity for signage and interior use.",
       },
     ],
-    priceFrom: "Custom Quote",
     icon: "storefront",
   },
   {
@@ -343,7 +331,6 @@ export const services: Service[] = [
         a: "Yes, we work from your brand guidelines for colors, fonts, and logo usage.",
       },
     ],
-    priceFrom: "Custom Quote",
     icon: "briefcase",
   },
   {
@@ -371,7 +358,6 @@ export const services: Service[] = [
         a: "No, quality vinyl wraps protect the original paint and can be removed without damage.",
       },
     ],
-    priceFrom: "Rs. 25,000",
     icon: "truck",
   },
   {
@@ -399,7 +385,6 @@ export const services: Service[] = [
         a: "Yes, our design team can create a custom mural concept for your space.",
       },
     ],
-    priceFrom: "Rs. 30 / sq.ft",
     icon: "wall",
   },
   {
@@ -427,7 +412,6 @@ export const services: Service[] = [
         a: "Yes, UV-cured inks are weather and fade resistant, suitable for most outdoor applications.",
       },
     ],
-    priceFrom: "Rs. 40 / sq.ft",
     icon: "uv",
   },
   {
@@ -455,7 +439,6 @@ export const services: Service[] = [
         a: "Our machines handle standard 4x8 ft sheets; contact us for larger format requirements.",
       },
     ],
-    priceFrom: "Rs. 10 / inch",
     icon: "cnc",
   },
 ];
