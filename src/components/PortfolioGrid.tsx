@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { portfolio, portfolioCategories, type PortfolioCategory, type PortfolioProject } from "@/data/portfolio";
+import { portfolioCategories, type PortfolioCategory, type PortfolioProject } from "@/data/portfolio";
 
 const FILTERS: (PortfolioCategory | "All")[] = ["All", ...portfolioCategories];
 
@@ -40,9 +40,9 @@ function PortfolioThumb({ project, index }: { project: PortfolioProject; index: 
   );
 }
 
-export default function PortfolioGrid() {
+export default function PortfolioGrid({ items }: { items: PortfolioProject[] }) {
   const [active, setActive] = useState<PortfolioCategory | "All">("All");
-  const filtered = active === "All" ? portfolio : portfolio.filter((p) => p.category === active);
+  const filtered = active === "All" ? items : items.filter((p) => p.category === active);
 
   return (
     <div>

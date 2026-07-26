@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { galleryItems, galleryCategories, type GalleryCategory } from "@/data/gallery";
+import { galleryCategories, type GalleryCategory } from "@/data/gallery";
+import type { GalleryItem } from "@/lib/content";
 
 const FILTERS: (GalleryCategory | "All")[] = ["All", ...galleryCategories];
 
@@ -24,7 +25,7 @@ function GalleryTile({
   index,
   onClick,
 }: {
-  item: (typeof galleryItems)[number];
+  item: GalleryItem;
   index: number;
   onClick: () => void;
 }) {
@@ -60,7 +61,7 @@ function GalleryTile({
   );
 }
 
-function LightboxImage({ item }: { item: (typeof galleryItems)[number] }) {
+function LightboxImage({ item }: { item: GalleryItem }) {
   const loaded = useImageExists(item.image);
 
   if (loaded && item.image) {
@@ -87,13 +88,12 @@ function LightboxImage({ item }: { item: (typeof galleryItems)[number] }) {
   );
 }
 
-export default function GalleryGrid() {
+export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
   const [active, setActive] = useState<GalleryCategory | "All">("All");
   const [lightbox, setLightbox] = useState<string | null>(null);
 
-  const filtered =
-    active === "All" ? galleryItems : galleryItems.filter((g) => g.category === active);
-  const activeItem = galleryItems.find((g) => g.id === lightbox);
+  const filtered = active === "All" ? items : items.filter((g) => g.category === active);
+  const activeItem = items.find((g) => g.id === lightbox);
 
   return (
     <div>

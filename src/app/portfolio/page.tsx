@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PortfolioGrid from "@/components/PortfolioGrid";
+import { getPortfolio } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -9,7 +10,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/portfolio" },
 };
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  const items = await getPortfolio();
+
   return (
     <>
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Portfolio" }]} />
@@ -27,7 +30,7 @@ export default function PortfolioPage() {
         </p>
 
         <div className="mt-12">
-          <PortfolioGrid />
+          <PortfolioGrid items={items} />
         </div>
       </section>
     </>

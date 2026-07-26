@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { portfolio } from "@/data/portfolio";
+import { getPortfolio } from "@/lib/content";
 
-export default function Gallery() {
+export default async function Gallery() {
+  const portfolio = await getPortfolio();
   const featured = portfolio.slice(0, 6);
 
   return (

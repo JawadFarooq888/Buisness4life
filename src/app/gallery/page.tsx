@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GalleryGrid from "@/components/GalleryGrid";
+import { getGallery } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -9,7 +10,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/gallery" },
 };
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const items = await getGallery();
+
   return (
     <>
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Gallery" }]} />
@@ -26,7 +29,7 @@ export default function GalleryPage() {
         </p>
 
         <div className="mt-12">
-          <GalleryGrid />
+          <GalleryGrid items={items} />
         </div>
       </section>
     </>
