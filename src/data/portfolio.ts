@@ -1,123 +1,186 @@
 export type PortfolioCategory =
-  | "Restaurants"
-  | "Shops"
-  | "Offices"
-  | "Hospitals"
-  | "Schools"
-  | "Shopping Malls"
-  | "Corporate Branding"
-  | "Outdoor Sign Boards";
+  | "Restaurants & Cafes"
+  | "Shops & Retail"
+  | "Offices & Corporate"
+  | "Clinics & Fitness"
+  | "Salons & Beauty"
+  | "Hotels"
+  | "Custom Neon Signs";
 
 export type PortfolioProject = {
   slug: string;
   title: string;
   category: PortfolioCategory;
-  location: string;
+  location?: string;
   servicesUsed: string[];
   description: string;
+  /** Path under /public once the real project photo is added, e.g. "/portfolio/felix-associates.jpg" */
+  image?: string;
 };
 
 export const portfolioCategories: PortfolioCategory[] = [
-  "Restaurants",
-  "Shops",
-  "Offices",
-  "Hospitals",
-  "Schools",
-  "Shopping Malls",
-  "Corporate Branding",
-  "Outdoor Sign Boards",
+  "Restaurants & Cafes",
+  "Shops & Retail",
+  "Offices & Corporate",
+  "Clinics & Fitness",
+  "Salons & Beauty",
+  "Hotels",
+  "Custom Neon Signs",
 ];
 
 export const portfolio: PortfolioProject[] = [
   {
-    slug: "spice-route-restaurant-signage",
-    title: "Spice Route Restaurant Signage",
-    category: "Restaurants",
-    location: "Lahore",
-    servicesUsed: ["Backlit Sign Boards", "Menu Panaflex", "Wall Graphics"],
+    slug: "felix-associates",
+    title: "Felix Associates",
+    category: "Offices & Corporate",
+    servicesUsed: ["Acrylic Sign Boards", "3D Letter Sign Boards", "Office Branding"],
     description:
-      "A warm, backlit fascia sign paired with interior menu panaflex and a feature wall mural for a busy family restaurant.",
+      "Reception wall branding with a raised acrylic logo and 3D lettering — \"Create. Enhance. Sustain.\"",
+    image: "/portfolio/felix-associates.jpg",
   },
   {
-    slug: "urban-cuts-barbershop",
-    title: "Urban Cuts Barbershop",
-    category: "Shops",
-    location: "Islamabad",
-    servicesUsed: ["Neon Sign Boards", "Acrylic Sign Boards", "Vinyl Printing"],
+    slug: "we-carnivores",
+    title: "We Carnivores",
+    category: "Restaurants & Cafes",
+    servicesUsed: ["3D Letter Sign Boards", "Shop Branding", "Digital Printing"],
     description:
-      "A photogenic neon logo sign and acrylic name board designed to make this barbershop's storefront instantly recognizable.",
+      "Rooftop 3D channel lettering plus a full storefront fascia and window branding package for this restaurant's launch.",
+    image: "/portfolio/we-carnivores.jpg",
   },
   {
-    slug: "meridian-corporate-tower",
-    title: "Meridian Corporate Tower Lobby",
-    category: "Offices",
-    location: "Islamabad",
-    servicesUsed: ["3D Letter Sign Boards", "Office Branding", "Wall Graphics"],
+    slug: "hickory-cafe",
+    title: "Hickory Cafe",
+    category: "Restaurants & Cafes",
+    servicesUsed: ["Neon Sign Boards", "Backlit Sign Boards"],
     description:
-      "Halo-lit stainless steel 3D letters and wayfinding signage for a multi-tenant corporate office lobby.",
+      "A warm gold script neon sign reading \"Fire Up The Flavours\" — the centerpiece of this cafe's interior branding.",
+    image: "/portfolio/hickory-cafe.jpg",
   },
   {
-    slug: "city-care-hospital",
-    title: "City Care Hospital Signage",
-    category: "Hospitals",
-    location: "Rawalpindi",
-    servicesUsed: ["LED Sign Boards", "Wayfinding", "ACP Cladding"],
+    slug: "mechani-it-store",
+    title: "Mechani IT Store",
+    category: "Shops & Retail",
+    servicesUsed: ["Backlit Sign Boards", "Acrylic Sign Boards"],
     description:
-      "Clear, high-visibility LED signage and directional wayfinding across a busy multi-floor hospital building.",
+      "Bold backlit acrylic fascia signage with the store logo and contact numbers built directly into the panel.",
+    image: "/portfolio/mechani-it-store.jpg",
   },
   {
-    slug: "greenfield-school-branding",
-    title: "Greenfield School Branding",
-    category: "Schools",
-    location: "Faisalabad",
-    servicesUsed: ["Acrylic Sign Boards", "Wall Graphics", "Vinyl Printing"],
+    slug: "swm",
+    title: "SWM",
+    category: "Shops & Retail",
+    servicesUsed: ["LED Sign Boards", "LED Display Boards"],
     description:
-      "Full campus signage package including entrance name boards, classroom plates, and motivational wall graphics.",
+      "Illuminated channel-letter logo installed alongside a full-width scrolling LED display board.",
+    image: "/portfolio/swm.jpg",
   },
   {
-    slug: "galaxy-mall-directory",
-    title: "Galaxy Mall Directory & Facade",
-    category: "Shopping Malls",
-    location: "Karachi",
-    servicesUsed: ["ACP Cladding", "LED Sign Boards", "3D Letter Sign Boards"],
+    slug: "third-space-cafe",
+    title: "Third Space — Cafe. Culture. Arts.",
+    category: "Restaurants & Cafes",
+    servicesUsed: ["Backlit Sign Boards", "Acrylic Sign Boards"],
     description:
-      "A modern ACP facade with illuminated 3D mall branding and a full directory signage system for tenants.",
+      "A warm backlit acrylic entrance sign with logo mark, built to anchor this cafe's night-time street presence.",
+    image: "/portfolio/third-space-cafe.jpg",
   },
   {
-    slug: "apex-logistics-fleet",
-    title: "Apex Logistics Fleet Branding",
-    category: "Corporate Branding",
-    location: "Lahore",
-    servicesUsed: ["Vehicle Branding", "One Way Vision", "Digital Printing"],
+    slug: "enove-smart-home",
+    title: "Enove Smart Home",
+    category: "Offices & Corporate",
+    servicesUsed: ["LED Sign Boards", "Acrylic Sign Boards"],
     description:
-      "Full-fleet vehicle wraps and one-way vision rear graphics rolled out across 40+ delivery vans.",
+      "A full illuminated product wall listing smart home services — lighting, curtains, climate, and smart locks.",
+    image: "/portfolio/enove-smart-home.jpg",
   },
   {
-    slug: "highway-hoarding-network",
-    title: "Highway Hoarding Network",
-    category: "Outdoor Sign Boards",
-    location: "Multan",
-    servicesUsed: ["Panaflex Boards", "Digital Printing"],
+    slug: "dr-waseem-clinic",
+    title: "Dr Waseem Clinic & Physio-Rehab",
+    category: "Clinics & Fitness",
+    servicesUsed: ["UV Printing", "Backlit Sign Boards", "3D Letter Sign Boards"],
     description:
-      "A network of large-format panaflex hoardings installed along a major highway corridor for a retail client.",
+      "A large UV-printed facade panel with backlit clinic branding, visible clearly by day and lit up by night.",
+    image: "/portfolio/dr-waseem-clinic.jpg",
   },
   {
-    slug: "cotton-mills-office-park",
-    title: "Cotton Mills Office Park",
-    category: "Corporate Branding",
-    location: "Faisalabad",
-    servicesUsed: ["Office Branding", "Acrylic Sign Boards", "CNC & Laser Cutting"],
+    slug: "koyla-terrace",
+    title: "Koyla Terrace",
+    category: "Restaurants & Cafes",
+    servicesUsed: ["LED Sign Boards", "Digital Printing"],
     description:
-      "Reception signage, meeting room plates, and CNC-cut acrylic wayfinding for a textile group's head office.",
+      "A circular illuminated rooftop sign for this shesha grill cafe, with flame and hookah artwork built into the design.",
+    image: "/portfolio/koyla-terrace.jpg",
   },
   {
-    slug: "north-star-electronics",
-    title: "North Star Electronics Showroom",
-    category: "Shops",
-    location: "Gujranwala",
-    servicesUsed: ["Panaflex Boards", "LED Sign Boards", "ACP Cladding"],
+    slug: "bahria-premium-hotel",
+    title: "Bahria Premium Hotel",
+    category: "Hotels",
+    servicesUsed: ["Shop Branding", "Acrylic Sign Boards", "ACP Cladding"],
     description:
-      "A striking illuminated storefront combining ACP cladding, an LED name board, and panaflex promotional panels.",
+      "Full storefront branding package including fascia lettering and gold-accented reception name boards.",
+    image: "/portfolio/bahria-premium-hotel.jpg",
+  },
+  {
+    slug: "greenleaf-mart",
+    title: "Greenleaf Mart",
+    category: "Shops & Retail",
+    servicesUsed: ["Backlit Sign Boards", "Shop Branding", "Wall Graphics"],
+    description:
+      "Backlit logo signage paired with a full brand-wall display showcasing the store's product range.",
+    image: "/portfolio/greenleaf-mart.jpg",
+  },
+  {
+    slug: "surkhab",
+    title: "Surkhab",
+    category: "Restaurants & Cafes",
+    servicesUsed: ["Backlit Sign Boards", "CNC & Laser Cutting"],
+    description:
+      "An ornate gold backlit emblem, CNC-cut and finished for a premium, decorative entrance statement.",
+    image: "/portfolio/surkhab.jpg",
+  },
+  {
+    slug: "beyond-dental",
+    title: "Beyond Dental by Dr. Amel Ali",
+    category: "Clinics & Fitness",
+    servicesUsed: ["Backlit Sign Boards", "Acrylic Sign Boards"],
+    description:
+      "Clean backlit clinic signage highlighting dentofacial aesthetics, implants, and smile design services.",
+    image: "/portfolio/beyond-dental.jpg",
+  },
+  {
+    slug: "naz-khan",
+    title: "Naz Khan — Glam Up With Naz",
+    category: "Salons & Beauty",
+    servicesUsed: ["Neon Sign Boards"],
+    description:
+      "A custom two-tone neon sign combining a silhouette logo in pink with gold script branding.",
+    image: "/portfolio/naz-khan.jpg",
+  },
+  {
+    slug: "toppy-the-pizza-guy",
+    title: "Toppy — The Pizza Guy",
+    category: "Restaurants & Cafes",
+    servicesUsed: ["LED Sign Boards", "3D Letter Sign Boards"],
+    description:
+      "A playful LED-lit mascot logo built into bold channel lettering, installed rooftop for maximum street visibility.",
+    image: "/portfolio/toppy-the-pizza-guy.jpg",
+  },
+  {
+    slug: "gym-fitnastic",
+    title: "Gym Fitnastic — Fitness on Fire",
+    category: "Clinics & Fitness",
+    servicesUsed: ["LED Sign Boards", "Backlit Sign Boards"],
+    description:
+      "Bold backlit gym signage combining lettering and logo artwork for a high-energy brand presence.",
+    image: "/portfolio/gym-fitnastic.jpg",
+  },
+  {
+    slug: "esajees",
+    title: "Esajee's — Est'd 1901",
+    category: "Shops & Retail",
+    servicesUsed: ["Backlit Sign Boards"],
+    description:
+      "A heritage retail brand's script logo rebuilt as a clean backlit fascia sign — \"Think Globally, Shop Locally.\"",
+    image: "/portfolio/esajees.jpg",
   },
 ];
 

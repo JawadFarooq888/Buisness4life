@@ -43,7 +43,7 @@ export default function Gallery() {
                 {project.title}
               </span>
               <span className="relative mt-1 text-xs text-muted">
-                📍 {project.location}
+                {project.servicesUsed[0]}
               </span>
             </Link>
           ))}

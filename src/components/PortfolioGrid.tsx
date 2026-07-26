@@ -1,9 +1,44 @@
 "use client";
 
-import { useState } from "react";
-import { portfolio, portfolioCategories, type PortfolioCategory } from "@/data/portfolio";
+import { useEffect, useState } from "react";
+import { portfolio, portfolioCategories, type PortfolioCategory, type PortfolioProject } from "@/data/portfolio";
 
 const FILTERS: (PortfolioCategory | "All")[] = ["All", ...portfolioCategories];
+
+function PortfolioThumb({ project, index }: { project: PortfolioProject; index: number }) {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!project.image) return;
+    const img = new window.Image();
+    img.onload = () => setLoaded(true);
+    img.onerror = () => setLoaded(false);
+    img.src = project.image;
+  }, [project.image]);
+
+  if (loaded && project.image) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={project.image}
+        alt={project.title}
+        className="h-36 w-full object-cover"
+      />
+    );
+  }
+
+  return (
+    <div
+      className={`flex h-36 items-center justify-center text-3xl font-bold ${
+        index % 2 === 0
+          ? "bg-gradient-to-br from-red/15 to-background-alt text-red"
+          : "bg-gradient-to-br from-gold/20 to-background-alt text-gold"
+      }`}
+    >
+      {project.title.charAt(0)}
+    </div>
+  );
+}
 
 export default function PortfolioGrid() {
   const [active, setActive] = useState<PortfolioCategory | "All">("All");
@@ -31,15 +66,7 @@ export default function PortfolioGrid() {
       <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((project, i) => (
           <div key={project.slug} className="card-surface overflow-hidden rounded-2xl">
-            <div
-              className={`flex h-36 items-center justify-center text-3xl font-bold ${
-                i % 2 === 0
-                  ? "bg-gradient-to-br from-red/15 to-background-alt text-red"
-                  : "bg-gradient-to-br from-gold/20 to-background-alt text-gold"
-              }`}
-            >
-              {project.title.charAt(0)}
-            </div>
+            <PortfolioThumb project={project} index={i} />
             <div className="p-6">
               <span className="text-xs font-semibold uppercase tracking-wide text-red">
                 {project.category}
@@ -50,7 +77,9 @@ export default function PortfolioGrid() {
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 {project.description}
               </p>
-              <p className="mt-3 text-xs text-muted">📍 {project.location}</p>
+              {project.location && (
+                <p className="mt-3 text-xs text-muted">📍 {project.location}</p>
+              )}
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {project.servicesUsed.map((s) => (
                   <span
