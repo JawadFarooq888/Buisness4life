@@ -18,7 +18,7 @@ export default function AdminProtectedLayout({
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-8">
             <Link href="/admin" className="text-lg font-extrabold tracking-tight">
-              <span className="text-red">Glow</span>Forge{" "}
+              <span className="text-red">Buisness</span>4Life{" "}
               <span className="text-xs font-normal text-muted-invert">Admin</span>
             </Link>
             <nav className="hidden gap-6 sm:flex">

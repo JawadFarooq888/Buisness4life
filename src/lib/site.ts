@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "GlowForge Signs",
-  shortName: "GlowForge",
+  name: "Buisness4Life",
+  shortName: "Buisness4Life",
   tagline: "Sign Boards & Branding Solutions",
   description:
-    "GlowForge Signs designs, prints, and installs LED sign boards, acrylic & neon signs, panaflex, ACP cladding, vehicle branding, and complete shop & office branding across Pakistan.",
-  url: "https://www.glowforgesigns.com",
+    "Buisness4Life designs, prints, and installs LED sign boards, acrylic & neon signs, panaflex, ACP cladding, vehicle branding, and complete shop & office branding across Pakistan.",
+  url: "https://buisness4life.vercel.app",
   phones: [
     { display: "0312-8207525", tel: "+923128207525" },
     { display: "0316-5692495", tel: "+923165692495" },

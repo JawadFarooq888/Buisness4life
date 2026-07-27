@@ -22,8 +22,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-1 text-2xl font-extrabold tracking-tight">
-              <span className="text-red">Glow</span>
-              <span className="text-foreground-invert">Forge</span>
+              <span className="text-red">Buisness</span>
+              <span className="text-foreground-invert">4Life</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm">
               LED, acrylic, neon &amp; panaflex sign boards, ACP cladding, and

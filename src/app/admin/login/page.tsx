@@ -18,8 +18,8 @@ export default async function AdminLoginPage({
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
           <span className="text-2xl font-extrabold tracking-tight">
-            <span className="text-red">Glow</span>
-            <span className="text-foreground-invert">Forge</span>
+            <span className="text-red">Buisness</span>
+            <span className="text-foreground-invert">4Life</span>
           </span>
           <p className="mt-2 text-sm text-muted-invert">Admin Login</p>
         </div>

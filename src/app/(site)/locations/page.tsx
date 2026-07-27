@@ -6,7 +6,7 @@ import { cities } from "@/data/cities";
 export const metadata: Metadata = {
   title: "Locations We Serve",
   description:
-    "GlowForge Signs provides sign boards, printing, and branding services across Lahore, Islamabad, Rawalpindi, Karachi, Faisalabad, Gujranwala, Sialkot, Multan, and Peshawar.",
+    "Buisness4Life provides sign boards, printing, and branding services across Lahore, Islamabad, Rawalpindi, Karachi, Faisalabad, Gujranwala, Sialkot, Multan, and Peshawar.",
   alternates: { canonical: "/locations" },
 };
 

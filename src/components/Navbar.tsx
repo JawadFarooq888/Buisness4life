@@ -43,8 +43,8 @@ export default function Navbar() {
 
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <Link href="/" className="flex items-center gap-1 text-2xl font-extrabold tracking-tight">
-          <span className="text-red">Glow</span>
-          <span className="text-foreground">Forge</span>
+          <span className="text-red">Buisness</span>
+          <span className="text-foreground">4Life</span>
         </Link>
 
         <div className="hidden items-center gap-8 lg:flex">

@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about GlowForge Signs — our mission, experience, and the team behind LED, acrylic, neon, and panaflex sign boards, ACP cladding, and branding across Pakistan.",
+    "Learn about Buisness4Life — our mission, experience, and the team behind LED, acrylic, neon, and panaflex sign boards, ACP cladding, and branding across Pakistan.",
   alternates: { canonical: "/about" },
 };
 
